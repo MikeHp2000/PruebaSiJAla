@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TableViewController" customModule="tablas2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="M7x-GU-0Fo">
+                                <rect key="frame" x="0.0" y="12.666666666666686" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCellID" rowHeight="100" id="kBl-vn-age" customClass="TableViewCell" customModule="tablas2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kBl-vn-age" id="c8S-NB-GEJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circulo" translatesAutoresizingMaskIntoConstraints="NO" id="Lpr-lL-XRL">
+                                                    <rect key="frame" x="283" y="5" width="90" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="9Ap-tH-Xoh"/>
+                                                        <constraint firstAttribute="width" secondItem="Lpr-lL-XRL" secondAttribute="height" id="KuD-vk-WhO"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDo-Sf-Xeo">
+                                                    <rect key="frame" x="33" y="37" width="367" height="26.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eDo-Sf-Xeo" firstAttribute="leading" secondItem="c8S-NB-GEJ" secondAttribute="leading" constant="33" id="A7D-oT-NEt"/>
+                                                <constraint firstItem="eDo-Sf-Xeo" firstAttribute="centerX" relation="greaterThanOrEqual" secondItem="c8S-NB-GEJ" secondAttribute="centerX" constant="20" id="DrN-6Y-VyD"/>
+                                                <constraint firstAttribute="trailing" secondItem="Lpr-lL-XRL" secondAttribute="trailing" constant="20" id="lHb-xE-w2M"/>
+                                                <constraint firstItem="eDo-Sf-Xeo" firstAttribute="centerY" secondItem="c8S-NB-GEJ" secondAttribute="centerY" id="lKd-OO-dNF"/>
+                                                <constraint firstItem="Lpr-lL-XRL" firstAttribute="centerY" secondItem="c8S-NB-GEJ" secondAttribute="centerY" id="r3P-fi-H2k"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ShapeImage" destination="Lpr-lL-XRL" id="qma-qn-Ztn"/>
+                                            <outlet property="ShapeName" destination="eDo-Sf-Xeo" id="eAK-Y1-IDr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="UyJ-nH-7EG"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="NMS-Rn-Uta"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="M7x-GU-0Fo" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="JcC-gQ-VgJ"/>
+                            <constraint firstItem="M7x-GU-0Fo" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="W4e-eu-GZb"/>
+                            <constraint firstItem="M7x-GU-0Fo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Z1y-h7-E47"/>
+                            <constraint firstItem="M7x-GU-0Fo" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="sLJ-Ww-AYP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="shapeTableView" destination="M7x-GU-0Fo" id="fi4-5i-UVf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="circulo" width="360" height="360"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

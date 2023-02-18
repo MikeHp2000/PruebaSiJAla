@@ -41,7 +41,7 @@ extension ViewController: UITableViewDataSource {
     
     //Repeticiones de elementos
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 6
+        return 2
     }
     
     //Agregar filas= Rows

@@ -96,6 +96,7 @@ func setup() {
     addBarrier(at: Point(x: 175, y: 100), width: 80, height: 25, angle: 0.1)
     addBarrier(at: Point(x: 100, y: 150), width: 30, height: 15, angle: -0.2)
     addBarrier(at: Point(x: 325, y: 150), width: 100, height: 25, angle: 0.3)
+    addBarrier(at: Point(x: 325, y: 148), width: 40, height: 30, angle: 0.0)
 
     //Cañon
     setupFunnel()
@@ -106,6 +107,7 @@ func setup() {
     addTarget(at: Point(x: 269, y: 453))
     addTarget(at: Point(x: 213, y: 348))
     addTarget(at: Point(x: 113, y: 267))
+    addTarget(at: Point(x: 115, y: 256))
 
     resetGame()
     
